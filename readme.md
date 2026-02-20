@@ -128,121 +128,34 @@ Override these in your project to match your vibe
 
 ## Development
 
-### Setup
+1. Clone the repository
 
 ```bash
-git clone https://github.com/pantherdb/pango-toolbar.git
-cd pango-toolbar
+git clone [repository-url]
+```
+
+2. Install dependencies
+
+```bash
 npm install
 ```
 
-### Commands
-
-| Command | Description |
-| --- | --- |
-| `npm start` | Dev server with hot reload at localhost |
-| `npm run build` | Production build |
-| `npm test` | Run all tests (spec + e2e) |
-| `npm run test.watch` | Run tests in watch mode |
-| `npm run generate` | Scaffold a new component |
-
-### Running a single test file
+3. Start development server
 
 ```bash
-npx stencil test --spec src/components/pango-dropdown/pango-dropdown.spec.ts
-npx stencil test --e2e src/components/pango-dropdown/pango-dropdown.e2e.ts
+npm start
 ```
 
-## Contributing
-
-### Branch workflow
-
-1. Create a feature branch from `main`
-2. Make your changes and write tests
-3. Open a PR against `main`
-4. CI runs build, tests, and commit lint automatically
-5. Squash merge into `main` with a conventional commit message
-
-### Commit messages
-
-This project uses [Conventional Commits](https://www.conventionalcommits.org/) to automate versioning and changelog generation. All commits must follow this format:
-
-```text
-<type>(<optional scope>): <description>
-```
-
-| Type | Version bump | When to use |
-| --- | --- | --- |
-| `feat` | Minor (0.1.0 -> 0.2.0) | New feature or capability |
-| `fix` | Patch (0.1.0 -> 0.1.1) | Bug fix |
-| `perf` | Patch | Performance improvement |
-| `docs` | No release | Documentation only |
-| `style` | No release | Formatting, whitespace |
-| `refactor` | No release | Code change that doesn't fix a bug or add a feature |
-| `test` | No release | Adding or updating tests |
-| `chore` | No release | Build process, tooling, dependencies |
-| `ci` | No release | CI/CD changes |
-
-**Examples:**
+4. Run tests
 
 ```bash
-git commit -m "feat: add dark mode toggle to toolbar"
-git commit -m "fix: dropdown not closing on outside click"
-git commit -m "feat(dropdown): add maxHeight prop"
-git commit -m "docs: update CSS variables table in README"
+npm test
 ```
 
-For breaking changes, add `BREAKING CHANGE:` in the commit body or `!` after the type:
+5. Build for production
 
 ```bash
-git commit -m "feat!: rename headerTitle prop to title"
-```
-
-Commitlint runs on PRs to validate your messages. If it fails, amend your commit:
-
-```bash
-git commit --amend -m "feat: correct message here"
-git push --force-with-lease
-```
-
-### Releases
-
-Releases are **fully automated** via [semantic-release](https://github.com/semantic-release/semantic-release). When a PR is merged to `main`:
-
-1. Semantic-release analyzes the commit messages since the last tag
-2. Determines the version bump (major/minor/patch) or skips if no releasable commits
-3. Updates `package.json` version and `CHANGELOG.md`
-4. Publishes to npm
-5. Creates a GitHub release with auto-generated notes
-6. Tags the release (e.g., `v0.2.0`)
-7. Commits the version bump back to `main` with `[skip ci]`
-
-**You never need to manually bump versions, edit the changelog, or create tags.**
-
-### What triggers a release?
-
-| Commit type in `main` | Result |
-| --- | --- |
-| `feat:` | Minor version bump + release |
-| `fix:`, `perf:` | Patch version bump + release |
-| `docs:`, `chore:`, `ci:`, `test:`, `refactor:`, `style:` | No release |
-| `feat!:` or `BREAKING CHANGE:` | Major version bump + release |
-
-### Project structure
-
-```text
-src/
-  components/
-    pango-toolbar/       # Main toolbar component
-    pango-dropdown/      # Generic dropdown component
-  utils/
-    environment.ts       # Centralized external URLs
-    __mocks__/           # Jest mocks (image imports)
-.github/
-  workflows/
-    ci.yml               # Build + test on PRs
-    semantic-release.yml # Auto-release on push to main
-    commitlint.yml       # Commit message validation on PRs
+npm run build
 ```
 
 ## Browser Support
@@ -255,3 +168,4 @@ src/
 ## License
 
 MIT
+

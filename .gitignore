@@ -24,10 +24,3 @@ $RECYCLE.BIN/
 Thumbs.db
 UserInterfaceState.xcuserstate
 .env
-
-# Claude Code
-.claude/settings.local.json
-
-# System Files
-.DS_Store
-Thumbs.db
