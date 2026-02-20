@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type                | Default  |
+| -------- | --------- | ----------- | ------------------- | -------- |
+| `align`  | `align`   |             | `"left" \| "right"` | `'left'` |
+
+
 ## Events
 
 | Event            | Description | Type                   |

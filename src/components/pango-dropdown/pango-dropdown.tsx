@@ -1,4 +1,4 @@
-import { Component, h, State, Element, Event, EventEmitter } from '@stencil/core';
+import { Component, h, Prop, State, Element, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'pango-dropdown',
@@ -7,6 +7,7 @@ import { Component, h, State, Element, Event, EventEmitter } from '@stencil/core
 })
 export class PangoDropdown {
   @Element() host: HTMLElement;
+  @Prop() align: 'left' | 'right' = 'left';
   @State() isOpen: boolean = false;
   @Event() dropdownToggle: EventEmitter<boolean>;
 
@@ -38,7 +39,7 @@ export class PangoDropdown {
         <a href="#" class="dropdown-trigger" onClick={this.toggleDropdown}>
           <slot name="trigger">Toggle Dropdown</slot>
         </a>
-        <div class={`dropdown-content ${this.isOpen ? 'active' : ''}`}>
+        <div class={`dropdown-content ${this.isOpen ? 'active' : ''} ${this.align === 'right' ? 'align-right' : ''}`}>
           <slot name="content"></slot>
         </div>
       </div>
