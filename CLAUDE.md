@@ -49,6 +49,7 @@ Stencil produces multiple output formats in `dist/`: ESM, CJS, and custom elemen
 ## Git Commits
 
 - Do NOT include the `Co-Authored-By` line in commit messages.
+- Do NOT include "Generated with Claude Code" in PR descriptions or commit messages.
 
 ## Task Plans
 
