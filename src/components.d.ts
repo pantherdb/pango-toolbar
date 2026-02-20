@@ -5,10 +5,14 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ApiVersion } from "./utils/environment";
+export { ApiVersion } from "./utils/environment";
 export namespace Components {
     interface PangoDropdown {
+        "align": 'left' | 'right';
     }
     interface PangoToolbar {
+        "apiVersion": ApiVersion;
         "headerSubTitle": string;
         "headerTitle": string;
         "pangoHome": string;
@@ -49,9 +53,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PangoDropdown {
+        "align"?: 'left' | 'right';
         "onDropdownToggle"?: (event: PangoDropdownCustomEvent<boolean>) => void;
     }
     interface PangoToolbar {
+        "apiVersion"?: ApiVersion;
         "headerSubTitle"?: string;
         "headerTitle"?: string;
         "pangoHome"?: string;

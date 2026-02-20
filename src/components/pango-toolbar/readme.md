@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property         | Attribute          | Description | Type     | Default               |
-| ---------------- | ------------------ | ----------- | -------- | --------------------- |
-| `headerSubTitle` | `header-sub-title` |             | `string` | `'Human Functionome'` |
-| `headerTitle`    | `header-title`     |             | `string` | `'PAN-GO'`            |
-| `pangoHome`      | `pango-home`       |             | `string` | `'/'`                 |
+| Property         | Attribute          | Description | Type                     | Default               |
+| ---------------- | ------------------ | ----------- | ------------------------ | --------------------- |
+| `apiVersion`     | `api-version`      |             | `"pango-1" \| "pango-2"` | `ApiVersions.V2`      |
+| `headerSubTitle` | `header-sub-title` |             | `string`                 | `'Human Functionome'` |
+| `headerTitle`    | `header-title`     |             | `string`                 | `'PAN-GO'`            |
+| `pangoHome`      | `pango-home`       |             | `string`                 | `'/'`                 |
 
 
 ## Dependencies

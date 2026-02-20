@@ -21,7 +21,7 @@
   color: var(--pango-dropdown-text);
   font-size: var(--pango-dropdown-font);
   cursor: pointer;
-  padding: 8px 16px;
+  padding: var(--pango-dropdown-trigger-padding, 8px 16px);
   text-decoration: none;
   display: inline-block;
 
@@ -44,6 +44,11 @@
 
   &.active {
     display: block;
+  }
+
+  &.align-right {
+    left: auto;
+    right: 0;
   }
 
   ::slotted(a) {

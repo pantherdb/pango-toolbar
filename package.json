@@ -1,6 +1,6 @@
 {
   "name": "pango-toolbar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "PAN-GO toolbar",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
@@ -25,13 +25,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/pantherdb/pango-toolbar.git"
   },
+  "bugs": {
+    "url": "https://github.com/pantherdb/pango-toolbar/issues"
+  },
+  "homepage": "https://github.com/pantherdb/pango-toolbar#readme",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build",
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
