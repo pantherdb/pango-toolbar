@@ -43,6 +43,11 @@ export const config: Config = {
       ]
     },
   ],
+  testing: {
+    moduleNameMapper: {
+      '\\.(png|jpg|jpeg|gif|svg)$': '<rootDir>/src/utils/__mocks__/imageMock.ts',
+    },
+  },
   extras: {
     enableImportInjection: true
   }
