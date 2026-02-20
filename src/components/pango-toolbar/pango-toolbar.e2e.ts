@@ -34,8 +34,8 @@ describe('pango-toolbar e2e', () => {
   it('renders about and help links with default home', async () => {
     const page = await newE2EPage();
     await page.setContent('<pango-toolbar></pango-toolbar>');
-    const aboutLink = await page.find('pango-toolbar >>> a[href="/about"]');
-    const helpLink = await page.find('pango-toolbar >>> a[href="/help"]');
+    const aboutLink = await page.find('pango-toolbar >>> a[href="//about"]');
+    const helpLink = await page.find('pango-toolbar >>> a[href="//help"]');
     expect(aboutLink).not.toBeNull();
     expect(helpLink).not.toBeNull();
   });
