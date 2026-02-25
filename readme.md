@@ -15,13 +15,13 @@ A customizable toolbar web component built with StencilJS. This component provid
 ### NPM
 
 ```bash
-npm install pango-toolbar
+npm install @pantherdb/pango-toolbar
 ```
 
 ### CDN
 
 ```html
-<script type="module" src="https://unpkg.com/pango-toolbar@latest/dist/pango-toolbar/pango-toolbar.esm.js"></script>
+<script type="module" src="https://unpkg.com/@pantherdb/pango-toolbar@latest/dist/pango-toolbar/pango-toolbar.esm.js"></script>
 ```
 
 ## Usage
@@ -29,23 +29,24 @@ npm install pango-toolbar
 ### Basic HTML
 
 ```html
-<script type="module" src="https://unpkg.com/pango-toolbar@latest/dist/pango-toolbar/pango-toolbar.esm.js"></script>
+<script type="module" src="https://unpkg.com/@pantherdb/pango-toolbar@latest/dist/pango-toolbar/pango-toolbar.esm.js"></script>
 
 <pango-toolbar
   header-title="PAN-GO"
   header-sub-title="Human Functionome"
-  pango-home="/">
+  pango-home="/"
+  api-version="pango-2">
 </pango-toolbar>
 ```
 
 ### React
 
 ```jsx
-import { PangoToolbar } from 'pango-toolbar';
+import { PangoToolbar } from '@pantherdb/pango-toolbar';
 
 const App = () => {
   return (
-    <PangoToolbar headerTitle="PAN-GO" headerSubTitle="Human Functionome" pangoHome="/" />
+    <PangoToolbar headerTitle="PAN-GO" headerSubTitle="Human Functionome" pangoHome="/" apiVersion="pango-2" />
   );
 };
 ```
@@ -69,22 +70,23 @@ export class AppModule {}
 ```typescript
 // app.component.ts
 import { Component } from '@angular/core';
-import 'pango-toolbar';
+import '@pantherdb/pango-toolbar';
 
 @Component({
   selector: 'app-root',
-  template: `<pango-toolbar headerTitle="PAN-GO" headerSubTitle="Human Functionome" pangoHome="/"> </pango-toolbar>`
+  template: `<pango-toolbar headerTitle="PAN-GO" headerSubTitle="Human Functionome" pangoHome="/" apiVersion="pango-2"> </pango-toolbar>`
 })
 export class AppComponent {}
 ```
 
 ## Props
 
-| Prop             | Type   | Default               | Description                          |
-| ---------------- | ------ | --------------------- | ------------------------------------ |
-| `headerTitle`    | string | `"PAN-GO"`            | The main toolbar title.              |
-| `headerSubTitle` | string | `"Human Functionome"` | The subtitle below the main title.   |
-| `pangoHome`      | string | `"/"`                 | The homepage URL linked to the logo. |
+| Prop             | Type   | Default               | Description                                                                          |
+| ---------------- | ------ | --------------------- | ------------------------------------------------------------------------------------ |
+| `headerTitle`    | string | `"PAN-GO"`            | The main toolbar title.                                                              |
+| `headerSubTitle` | string | `"Human Functionome"` | The subtitle below the main title.                                                   |
+| `pangoHome`      | string | `"/"`                 | The homepage URL linked to the logo.                                                 |
+| `apiVersion`     | string | `"pango-2"`           | PAN-GO API version (`"pango-1"` or `"pango-2"`). Controls download URLs and config.  |
 
 ---
 

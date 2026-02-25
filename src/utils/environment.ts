@@ -68,12 +68,3 @@ export const getConfig = (version: ApiVersion = DEFAULT_VERSION) => ({
   ...BASE_CONFIG,
   ...VERSION_CONFIGS[version],
 });
-
-export const getCurrentConfig = () => {
-  const searchParams = new URLSearchParams(window.location.search);
-  const version = (searchParams.get('apiVersion') as ApiVersion) || DEFAULT_VERSION;
-  return getConfig(version);
-};
-
-// Backward compatibility - default export for current version
-export const ENVIRONMENT = getCurrentConfig();

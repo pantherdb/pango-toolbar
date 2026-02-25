@@ -1,4 +1,4 @@
-import { Component, Prop, h, State, Element } from '@stencil/core';
+import { Component, Prop, h, State } from '@stencil/core';
 import { type ApiVersion, ApiVersions, getConfig } from '../../utils/environment';
 
 // Import images
@@ -12,8 +12,6 @@ import pantherLogo from './../../assets/images/panther-logo-yellow.png';
   assetsDirs: ['assets'],
 })
 export class PangoToolbar {
-  @Element() el: HTMLElement;
-
   @Prop() headerTitle: string = 'PAN-GO';
   @Prop() headerSubTitle: string = 'Human Functionome';
   @Prop() pangoHome: string = '/';
@@ -30,15 +28,6 @@ export class PangoToolbar {
     this.mediaQuery = window.matchMedia('(max-width: 767px)');
     this.isMobile = this.mediaQuery.matches;
     this.mediaQuery.addEventListener('change', this.mediaHandler);
-
-    // Auto-detect version from URL query param if prop was not explicitly set
-    if (!this.el.hasAttribute('api-version')) {
-      const searchParams = new URLSearchParams(window.location.search);
-      const urlVersion = searchParams.get('apiVersion') as ApiVersion;
-      if (urlVersion && (urlVersion === ApiVersions.V1 || urlVersion === ApiVersions.V2)) {
-        this.apiVersion = urlVersion;
-      }
-    }
   }
 
   disconnectedCallback() {
