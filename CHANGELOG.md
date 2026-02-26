@@ -1,3 +1,23 @@
+# 1.0.0 (2026-02-26)
+
+
+### Bug Fixes
+
+* **ci:** add semantic-release plugins as devDeps with npm@13 override ([be9eed4](https://github.com/pantherdb/pango-toolbar/commit/be9eed4979ab65ef11318eeb99fff000f7728ced))
+* **ci:** install commitlint globally to avoid project dep resolution ([c102c78](https://github.com/pantherdb/pango-toolbar/commit/c102c7876887a4332ba06d40f178ce146e359d2f))
+* **ci:** install semantic-release plugins before running release ([9217ea6](https://github.com/pantherdb/pango-toolbar/commit/9217ea6bdd79ae7d996d6c90b5643bb53b17893a))
+* **ci:** pass NPM_TOKEN to semantic-release for npm publishing ([617a9d4](https://github.com/pantherdb/pango-toolbar/commit/617a9d4b2e2c6e57e228dd4a3a85469a50fc7fdf))
+* **ci:** skip puppeteer download and remove redundant tests in release workflow ([429dc24](https://github.com/pantherdb/pango-toolbar/commit/429dc2496175efc66a405aee12ccf866eb2b6edd))
+* **ci:** switch to OIDC trusted publishing for npm releases ([96aa732](https://github.com/pantherdb/pango-toolbar/commit/96aa73222251212abebe24a83400904f03c75073))
+* **ci:** use npx semantic-release with Node 22 for OIDC support ([da49868](https://github.com/pantherdb/pango-toolbar/commit/da498682308223a8a0c28cd9ed27b446e7de0d4d))
+* correct e2e test href and resolve duplicate mock warning ([16f6116](https://github.com/pantherdb/pango-toolbar/commit/16f611613d2199cbbefcb54ac22fcbb49b37c150))
+
+
+### Features
+
+* scope package to [@pantherdb](https://github.com/pantherdb) org and configure public access ([4e4e50b](https://github.com/pantherdb/pango-toolbar/commit/4e4e50bbafb986c30dcc9d286c1965d86eb4f9a5))
+* use apiVersion prop instead of URL query param for version selection ([43a860c](https://github.com/pantherdb/pango-toolbar/commit/43a860cfdf2f1d1010ce7ac79acc8c3ad4076af8))
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
