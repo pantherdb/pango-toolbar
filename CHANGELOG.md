@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pantherdb/pango-toolbar/compare/v1.0.0...v1.0.1) (2026-02-27)
+
+
+### Bug Fixes
+
+* add apiVersion property description to component readme ([c3a69e4](https://github.com/pantherdb/pango-toolbar/commit/c3a69e48216fe8af40ca42b39051c1416fd3b9f6))
+
 # 1.0.0 (2026-02-26)
 
 
