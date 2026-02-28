@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/pantherdb/pango-toolbar/compare/v1.0.1...v1.0.2) (2026-02-28)
+
+
+### Bug Fixes
+
+* **ci:** remove OIDC and configure npm auth via setup-node registry-url ([9445efe](https://github.com/pantherdb/pango-toolbar/commit/9445efe5be75edf8174dae8866953c214ec1fbc7))
+
 ## [1.0.1](https://github.com/pantherdb/pango-toolbar/compare/v1.0.0...v1.0.1) (2026-02-27)
 
 
